@@ -24,16 +24,28 @@ class todoservice{
 
     add_todo(todo){
         // Your code here
+        this.todos["todo"].push(todo)
     }
 
     delete_todo(id){
         // Your code here
+        this.todos["todo"] = this.todos["todo"].filter(x => x["title"] != id)
     }
 
     update_todo(id, todo){
         // Your code here
+        this.todos["todo"].forEach(element => {
+            if(element["title"]==id){
+                element["title"] =todo["title"]
+                element["description"] = todo["description"]
+                element["done"] = todo["done"]
+            }
+        });
     }
+
+
 }
+
 
 
 module.exports= todoservice;
