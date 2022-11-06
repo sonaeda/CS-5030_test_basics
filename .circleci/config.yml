@@ -27,7 +27,7 @@ jobs:
       - run:
           name: run tests
           command: cd test_javascript && npm run test
-
+#Running CLI for test-api-js file
   build-and-test-api-js:
     docker:
       - image: cimg/node:14.20.0
